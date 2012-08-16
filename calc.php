@@ -213,10 +213,10 @@ class Calc
 	/**
 	 * Helper function to quickly calculate an expression and return the result 
 	 **/
-	public static function do( $expression )
+	public static function get( $expression )
 	{
 		$calc = new Calc( $expression );
-		return $calc->calc();
+		return (int) $calc->calc();
 	}
 
 	function __construct($expression = '')
