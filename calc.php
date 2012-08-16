@@ -216,7 +216,7 @@ class Calc
 	public static function get( $expression )
 	{
 		$calc = new Calc( $expression );
-		return (int) $calc->calc();
+		return (float) $calc->calc();
 	}
 
 	function __construct($expression = '')
