@@ -209,6 +209,15 @@ class Calc
 	protected $expression;
 	protected $rpn = array();
 	protected $infix = array();
+	
+	/**
+	 * Helper function to quickly calculate an expression and return the result 
+	 **/
+	public static function do( $expression )
+	{
+		$calc = new Calc( $expression );
+		return $calc->calc();
+	}
 
 	function __construct($expression = '')
 	{
